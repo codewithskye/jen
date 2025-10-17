@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Epic Adventures by Jen</title>
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="image/jenlogo.png" alt="Epic Adventures by Jen" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="specialties.html" class="nav-link">Specialties <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="specialties.html#ethical-travel">Ethical Travel Agent</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="promotions.html" class="nav-link">Promotions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="destinations.html" class="nav-link active">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn-primary">Book Now</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <h1>Explore Amazing Destinations</h1>
+            <p>Discover your next adventure with our curated selection of world-class destinations</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="region-filter">Region</label>
+                    <select id="region-filter" class="filter-select">
+                        <option value="all">All Regions</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="americas">Americas</option>
+                        <option value="africa">Africa</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="country-filter">Country</label>
+                    <select id="country-filter" class="filter-select">
+                        <option value="all">All Countries</option>
+                        <option value="italy">Italy</option>
+                        <option value="japan">Japan</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="greece">Greece</option>
+                        <option value="peru">Peru</option>
+                        <option value="egypt">Egypt</option>
+                        <option value="australia">Australia</option>
+                        <option value="iceland">Iceland</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="setting-filter">Setting</label>
+                    <select id="setting-filter" class="filter-select">
+                        <option value="all">All Settings</option>
+                        <option value="beach">Beach</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="city">City</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="historical">Historical</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="season-filter">Best Time to Visit</label>
+                    <select id="season-filter" class="filter-select">
+                        <option value="all">Any Time</option>
+                        <option value="spring">Spring</option>
+                        <option value="summer">Summer</option>
+                        <option value="fall">Fall</option>
+                        <option value="winter">Winter</option>
+                    </select>
+                </div>
+                <button class="filter-reset" id="reset-filters">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="destinations-grid">
+        <div class="container">
+            <div class="destinations-container" id="destinations-container">
+                <!-- Destination Card 1 -->
+                <div class="destination-card" data-region="europe" data-country="italy" data-setting="cultural" data-season="spring">
+                    <div class="card-image">
+                        <img src="image/Coruña.jpg" alt="Coruña, Spain">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=Coruña" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>A Coruña, Spain</h3>
+                        <p>A Coruña, situated on Spain's northwestern coast in the Galicia region</p>
+                        <div class="card-tags">
+                            <span class="tag">Cultural</span>
+                            <span class="tag">Glass City</span>
+                            <span class="tag">Tower of Hercules</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best: Mar–May, Sep–Nov (Spring & Autumn)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 2 -->
+                <div class="destination-card" data-region="asia" data-country="japan" data-setting="cultural" data-season="spring">
+                    <div class="card-image">
+                        <img src="image/Acapulco.jpg" alt="Acapulco, Mexico">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=kyoto" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Acapulco, Mexico</h3>
+                        <p>Officially known as Acapulco de Juárez, is a vibrant city and major seaport located on Mexico's Pacific coast</p>
+                        <div class="card-tags">
+                            <span class="tag">Natural beauty</span>
+                            <span class="tag">Temples</span>
+                            <span class="tag">Amenities</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best: March–May, October–November (winter)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 3 -->
+                <div class="destination-card" data-region="asia" data-country="thailand" data-setting="beach" data-season="winter">
+                    <div class="card-image">
+                        <img src="image/Adelaide.jpg" alt="Adelaide, Australia">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=phuket" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Adelaide, Australia</h3>
+                        <p>Nestled between the rolling Adelaide Hills and the serene coastline</p>
+                        <div class="card-tags">
+                            <span class="tag">Beach</span>
+                            <span class="tag">Tropical</span>
+                            <span class="tag">Nightlife</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: March–May (Spring)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 4 -->
+                <div class="destination-card" data-region="europe" data-country="greece" data-setting="beach" data-season="summer">
+                    <div class="card-image">
+                        <img src="image/Amalfi Coast.jpg" alt="Amalfi Coast, Italy">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=santorini" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Amalfi Coast, Italy</h3>
+                        <p>The Amalfi Coast, a UNESCO World Heritage Site, stunning stretch of coastline in southern Italy.</p>
+                        <div class="card-tags">
+                            <span class="tag">Architecture</span>
+                            <span class="tag">Vineyards</span>
+                            <span class="tag">Citrus groves</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: March–May (Spring)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 5 -->
+                <div class="destination-card" data-region="americas" data-country="peru" data-setting="adventure" data-season="summer">
+                    <div class="card-image">
+                        <img src="image/Amsterdam.jpg" alt="Amsterdam, Netherlands">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=machu-picchu" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Amsterdam, Netherlands</h3>
+                        <p>Amsterdam, the capital of the Netherlands, is famous for its canals, historic charm, and vibrant culture.</p>
+                        <div class="card-tags">
+                            <span class="tag">Canals</span>
+                            <span class="tag">Museums</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: March–May (Spring)</span>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- Destination Card 6 -->
+                <div class="destination-card" data-region="africa" data-country="egypt" data-setting="historical" data-season="winter">
+                    <div class="card-image">
+                        <img src="image/Anchorage.jpg" alt="Anchorage, Alaska">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=cairo" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Anchorage, Alaska</h3>
+                        <p>Anchorage, Alaska’s largest city, sits between the Chugach Mountains and Cook Inlet, blending urban life with wild scenery.</p>
+                        <div class="card-tags">
+                            <span class="tag">Mountains</span>
+                            <span class="tag">Wildlife</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: June–August (Summer)</span>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- Destination Card 7 -->
+                <div class="destination-card" data-region="oceania" data-country="australia" data-setting="city" data-season="summer">
+                    <div class="card-image">
+                        <img src="image/Antwerp.jpg" alt="Antwerp, Belgium">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=sydney" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Antwerp, Belgium</h3>
+                        <p>Antwerp, Belgium’s second-largest city, is famed for its diamonds, fashion, and rich cultural heritage.</p>
+                        <div class="card-tags">
+                            <span class="tag">Diamonds</span>
+                            <span class="tag">Fashion</span>
+                            <span class="tag">Art</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: March–May (Spring)</span>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- Destination Card 8 -->
+                <div class="destination-card" data-region="europe" data-country="iceland" data-setting="adventure" data-season="winter">
+                    <div class="card-image">
+                        <img src="image/Auckland.jpg" alt="Auckland, New Zealand">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=iceland" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Auckland, New Zealand</h3>
+                        <p>Auckland, the “City of Sails,” blends urban sophistication with natural beauty and coastal charm.</p>
+                        <div class="card-tags">
+                            <span class="tag">Harbors</span>
+                            <span class="tag">Culture</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: December–February (Summer)</span>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- Destination Card 9 -->
+                <div class="destination-card" data-region="europe" data-country="iceland" data-setting="adventure" data-season="winter">
+                    <div class="card-image">
+                        <img src="image/Baltimore.jpg" alt="Baltimore, USA">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=iceland" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Baltimore, USA</h3>
+                        <p>Baltimore, known as “Charm City,” blends historic charm with a lively waterfront and vibrant culture.</p>
+                        <div class="card-tags">
+                            <span class="tag">Waterfront</span>
+                            <span class="tag">History</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: March–May (Spring)</span>
+                        </div>
+                    </div>                                       
+                </div>
+
+                <!-- Destination Card 10 -->
+                <div class="destination-card" data-region="europe" data-country="iceland" data-setting="adventure" data-season="winter">
+                    <div class="card-image">
+                        <img src="image/Bangkok.jpg" alt="Bangkok, Thailand">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=iceland" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bangkok, Thailand</h3>
+                        <p>Bangkok, Thailand’s vibrant capital, mixes golden temples, busy markets, and modern city life.</p>
+                        <div class="card-tags">
+                            <span class="tag">Temples</span>
+                            <span class="tag">Markets</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: November–February (Winter)</span>
+                        </div>
+                    </div>                                      
+                </div>
+
+                <!-- Destination Card 11 -->
+                <div class="destination-card" data-region="europe" data-country="iceland" data-setting="adventure" data-season="winter">
+                    <div class="card-image">
+                        <img src="image/Barcelona.jpg" alt="Barcelona, Spain">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=spain" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Barcelona, Spain</h3>
+                        <p>Barcelona, the capital of Catalonia, is known for its stunning architecture, beaches, and vibrant culture.</p>
+                        <div class="card-tags">
+                            <span class="tag">Architecture</span>
+                            <span class="tag">Beaches</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: March–May (Spring)</span>
+                        </div>
+                    </div>                                    
+                </div>
+
+
+                <!-- Destination Card 12 -->
+                <div class="destination-card" data-region="europe" data-country="iceland" data-setting="adventure" data-season="winter">
+                    <div class="card-image">
+                        <img src="image/Basseterre.jpg" alt="Basseterre, St. Kitts and Nevis">
+                        <div class="card-overlay">
+                            <a href="destination-detail.html?dest=iceland" class="explore-btn">Explore</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Basseterre, St. Kitts and Nevis</h3>
+                        <p>Basseterre, the capital of St. Kitts and Nevis, blends colonial charm with Caribbean vibrance and scenic beauty.</p>
+                        <div class="card-tags">
+                            <span class="tag">Beaches</span>
+                            <span class="tag">History</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <div class="card-info">
+                            <span class="best-time"><i class="fas fa-calendar"></i> Best time to visit: December–February (Winter)</span>
+                        </div>
+                    </div>                                                      
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No destinations found</h3>
+                <p>Try adjusting your filters to see more results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Adventure?</h2>
+                <p>Let us help you plan the perfect trip to any of these amazing destinations</p>
+                <a href="contact.html" class="btn-primary">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> 229-456-9188</p>
+                    <p><i class="fas fa-envelope"></i> epicadventuresbyjen@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/people/Epic-Adventures-by-Jen/61581569630558/"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epic Adventures by Jen. All rights reserved.</p>
+                <p class="disclaimer">An Independent Affiliate of A.S.A.P. Cruises Inc., Florida Seller of Travel No. FST ST15578, California Seller of Travel No. 2090937-50, Washington UBID No 603189022.</p>
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="destinations.js"></script>
+</body>
+</html>
