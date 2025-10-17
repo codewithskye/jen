@@ -4,8 +4,11 @@
 /* Page Header */
 .page-header {
     height: 60vh;
-    background: linear-gradient(135deg, rgba(230, 0, 126, 0.8), rgba(255, 77, 166, 0.8)),
-                url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+    background: linear-gradient(135deg, rgba(230, 0, 126, 0.45), rgba(255, 77, 166, 0.45)),
+    url('image/Top 10 Travel Tips for 2024.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
