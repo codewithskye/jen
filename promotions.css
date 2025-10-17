@@ -9,6 +9,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -677,6 +678,26 @@
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
+    .featured-promotion {
+        background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
+    }
+    
+    .featured-deal {
+        background: #333333;
+    }
+    
+    .deal-content h2 {
+        color: white !important;
+    }
+    
+    .deal-description {
+        color: white !important;
+    }
+    
+    .feature {
+        color: white !important;
+    }
+    
     .promotions-grid {
         background: #1a1a1a;
     }
@@ -687,12 +708,16 @@
     }
     
     .card-content h3 {
-        color: white;
+        color: white !important;
     }
     
     .promotion-description,
     .detail {
-        color: #ccc;
+        color: white !important;
+    }
+    
+    .section-title {
+        color: white !important;
     }
     
     .return-message {
@@ -700,11 +725,36 @@
     }
     
     .message-content h3 {
-        color: white;
+        color: white !important;
     }
     
     .message-content p,
     .message-features .feature {
-        color: #ccc;
+        color: white !important;
+    }
+    
+    /* Ensure footer text is white on dark background */
+    .footer {
+        color: white !important;
+    }
+    
+    .footer-section p,
+    .footer-section li,
+    .footer-section a {
+        color: #ccc !important;
+    }
+    
+    .footer-section a:hover {
+        color: #ff4da6 !important;
+    }
+    
+    .footer-bottom p,
+    .disclaimer,
+    .footer-links a {
+        color: #999 !important;
+    }
+    
+    .footer-links a:hover {
+        color: #ff4da6 !important;
     }
 }
