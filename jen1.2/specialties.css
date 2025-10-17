@@ -1,0 +1,868 @@
+/* Specialties Page Styles */
+
+/* Header Overlay */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darkens the background for text readability */
+    z-index: 1;
+}
+
+/* Tooltip Styles */
+.custom-tooltip {
+    position: absolute;
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Page Header */
+.page-header {
+    position: relative;
+    height: 60vh;
+    background: linear-gradient(135deg, rgba(230, 0, 126, 0.9), rgba(255, 77, 166, 0.9)),
+                url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Changed from fixed to prevent overlap issues */
+    background-color: #e6007e; /* Fallback solid color if image fails to load */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(230, 0, 126, 0.1), rgba(255, 77, 166, 0.1));
+    animation: shimmer 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.page-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-align: justify;
+}
+
+/* Ethical Travel Section */
+.ethical-travel {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.section-intro h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-intro h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #e6007e, #ff4da6);
+    border-radius: 2px;
+}
+
+.intro-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+/* Ethics Grid */
+.ethics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.ethics-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 0.6s ease-out;
+}
+
+.ethics-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #e6007e, #ff4da6);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.ethics-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(230, 0, 126, 0.15);
+}
+
+.ethics-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #e6007e, #ff4da6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.ethics-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.ethics-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.ethics-card p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.ethics-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ethics-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.ethics-features i {
+    color: #28a745;
+    font-size: 1rem;
+    width: 16px;
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 80px 0;
+    background: white;
+}
+
+.certifications h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.certifications h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #e6007e, #ff4da6);
+    border-radius: 2px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.certification-item {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+    position: relative; /* For progress bar positioning */
+}
+
+.certification-item:hover {
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.cert-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e6007e, #ff4da6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+}
+
+.certification-item:hover .cert-icon {
+    transform: scale(1.1);
+}
+
+.cert-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.certification-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.certification-item p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Progress Bar Styles (for certifications) */
+.cert-progress {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e6007e, #ff4da6);
+    border-radius: 3px;
+    width: 0%;
+    transition: width 1.5s ease-out;
+}
+
+.progress-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 600;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #e6007e, #ff4da6);
+    color: white;
+    text-align: center;
+}
+
+.impact-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 60px;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.stat-item {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-item p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Travel Tips Section */
+.travel-tips {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.travel-tips h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.travel-tips h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #e6007e, #ff4da6);
+    border-radius: 2px;
+}
+
+.travel-tips .section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tip-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: slideInUp 0.6s ease-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(230, 0, 126, 0.15);
+}
+
+.tip-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #e6007e, #ff4da6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover .tip-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.tip-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.tip-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.tip-card p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.cta-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .ethics-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .tips-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        height: 50vh;
+        background-attachment: scroll;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-header p {
+        font-size: 1.1rem;
+    }
+    
+    .ethical-travel {
+        padding: 80px 0;
+    }
+    
+    .section-intro h2 {
+        font-size: 2.2rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+    
+    .ethics-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .ethics-card {
+        padding: 30px;
+    }
+    
+    .certifications {
+        padding: 60px 0;
+    }
+    
+    .certifications h2 {
+        font-size: 2rem;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .impact-section {
+        padding: 80px 0;
+    }
+    
+    .impact-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .stat-number {
+        font-size: 2.8rem;
+    }
+    
+    .travel-tips {
+        padding: 80px 0;
+    }
+    
+    .travel-tips h2 {
+        font-size: 2rem;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .cta-section {
+        padding: 80px 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .section-intro h2 {
+        font-size: 1.8rem;
+    }
+    
+    .ethics-card {
+        padding: 25px;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .ethics-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .impact-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .travel-tips h2 {
+        font-size: 1.8rem;
+    }
+    
+    .tip-card {
+        padding: 25px;
+    }
+    
+    .tip-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .tip-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .page-header,
+    .impact-section,
+    .cta-section {
+        background: white !important;
+        color: #1a1a1a;
+    }
+    
+    .ethics-card,
+    .tip-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .ethics-card,
+    .tip-card {
+        border: 2px solid #000;
+    }
+    
+    .btn-outline {
+        border-width: 3px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .ethical-travel {
+        background: #1a1a1a;
+    }
+    
+    .ethics-card,
+    .tip-card {
+        background: #2a2a2a;
+        color: white;
+    }
+    
+    .ethics-card h3,
+    .tip-card h3 {
+        color: white;
+    }
+    
+    .ethics-card p,
+    .tip-card p,
+    .ethics-features li {
+        color: #ccc;
+    }
+    
+    .certifications {
+        background: #1a1a1a;
+    }
+    
+    .certification-item {
+        background: #2a2a2a;
+        color: white;
+    }
+    
+    .certification-item h3 {
+        color: white;
+    }
+    
+    .certification-item p {
+        color: #ccc;
+    }
+    
+    .travel-tips {
+        background: #1a1a1a;
+    }
+    
+    .travel-tips h2 {
+        color: white;
+    }
+    
+    .section-subtitle {
+        color: #ccc;
+    }
+    
+    .progress-bar {
+        background: #444;
+    }
+    
+    .progress-text {
+        color: #ccc;
+    }
+    
+    .footer {
+        background: #0d0d0d;
+    }
+    
+    .footer-section h3 {
+        color: #ff4da6;
+    }
+    
+    .footer-section p,
+    .footer-section li,
+    .footer-section a,
+    .footer-bottom p,
+    .disclaimer,
+    .footer-links a {
+        color: #bbb;
+    }
+    
+    .footer-bottom {
+        border-top-color: #444;
+    }
+}

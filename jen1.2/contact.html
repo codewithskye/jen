@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Epic Adventures by Jen</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="image/jenlogo.png" alt="Epic Adventures by Jen" class="logo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="specialties.html" class="nav-link">Specialties <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="specialties.html#ethical-travel">Ethical Travel Agent</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="promotions.html" class="nav-link">Promotions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="destinations.html" class="nav-link">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#contact-form" class="btn-primary">Book Now</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <h1>Contact Epic Adventures by Jen</h1>
+            <p>Ready to plan your next adventure? Let's make it happen together!</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Ready to chat about your dream vacation?</p>
+                    <a href="tel:229-456-9188" class="contact-link">229-456-9188</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us your travel questions and ideas</p>
+                    <a href="mailto:epicadventuresbyjen@gmail.com" class="contact-link">epicadventuresbyjen@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Business Hours</h3>
+                    <p>We're here when you need us</p>
+                    <div class="hours">
+                        <p><strong>Mon - Fri:</strong> 9:00 AM - 6:00 PM EST</p>
+                        <p><strong>Sat:</strong> 10:00 AM - 4:00 PM EST</p>
+                        <p><strong>Sun:</strong> By Appointment</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Emergency travel assistance</p>
+                    <p class="support-note">For travelers currently on trips</p>
+                    <a href="tel:229-456-9188" class="contact-link emergency">Emergency Line</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Start Planning Your Adventure</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours with personalized recommendations and pricing.</p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="travelType">Type of Travel *</label>
+                        <select id="travelType" name="travelType" required>
+                            <option value="">Select travel type...</option>
+                            <option value="cruise">Cruise</option>
+                            <option value="tour">Guided Tour</option>
+                            <option value="vacation-package">Vacation Package</option>
+                            <option value="honeymoon">Honeymoon/Romance</option>
+                            <option value="family">Family Vacation</option>
+                            <option value="adventure">Adventure Travel</option>
+                            <option value="cultural">Cultural Experience</option>
+                            <option value="wellness">Wellness Retreat</option>
+                            <option value="business">Business Travel</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination">Preferred Destination</label>
+                            <input type="text" id="destination" name="destination" placeholder="e.g., Caribbean, Europe, Asia...">
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range...</option>
+                                <option value="under-2000">Under $2,000</option>
+                                <option value="2000-5000">$2,000 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="10000-20000">$10,000 - $20,000</option>
+                                <option value="over-20000">Over $20,000</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="travelDate">Preferred Travel Date</label>
+                            <input type="date" id="travelDate" name="travelDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <select id="travelers" name="travelers">
+                                <option value="1">1 Traveler</option>
+                                <option value="2">2 Travelers</option>
+                                <option value="3">3 Travelers</option>
+                                <option value="4">4 Travelers</option>
+                                <option value="5">5 Travelers</option>
+                                <option value="6+">6+ Travelers</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests or Interests</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Tell us about any special occasions, accessibility needs, dietary restrictions, or specific interests..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us more about your dream vacation! What are you most excited about? Any specific experiences you're looking for?"></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for exclusive deals and travel tips
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a> *
+                        </label>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Send My Request</span>
+                        <span class="btn-loading">Sending...</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does it cost to use your services?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our planning services are completely free! We earn our commission from our travel partners, so there's no cost to you for our expertise and personalized service. You'll often save money through our exclusive deals and group rates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How far in advance should I book my trip?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For the best selection and pricing, we recommend booking 3-6 months in advance for domestic trips and 6-12 months for international travel. However, we can also help with last-minute bookings and often find great deals!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you handle travel insurance?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We strongly recommend travel insurance and can help you choose the right coverage for your trip. We work with reputable insurance providers to ensure you're protected against unexpected events.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I need to change or cancel my trip?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We're here to help with any changes or cancellations. Policies vary by supplier, but we'll work with you to minimize fees and find the best solution. This is another reason why travel insurance is so valuable!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer payment plans?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Many of our travel packages offer flexible payment options. You can often secure your booking with a deposit and pay the balance closer to your travel date. We'll explain all payment options during the planning process.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What makes you different from booking online myself?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide personalized service, insider knowledge, exclusive deals, and 24/7 support. If something goes wrong during your trip, you have a dedicated advocate working to resolve issues quickly. Plus, our expertise often saves you time and money!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Adventure?</h2>
+                <p>Don't wait – your perfect vacation is just a conversation away. Contact us today and let's start planning something amazing!</p>
+                <div class="cta-buttons">
+                    <a href="tel:229-456-9188" class="btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                    <a href="#contact-form" class="btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Send Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> 229-456-9188</p>
+                    <p><i class="fas fa-envelope"></i> epicadventuresbyjen@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/people/Epic-Adventures-by-Jen/61581569630558/"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epic Adventures by Jen. All rights reserved.</p>
+                <p class="disclaimer">An Independent Affiliate of A.S.A.P. Cruises Inc., Florida Seller of Travel No. FST ST15578, California Seller of Travel No. 2090937-50, Washington UBID No 603189022.</p>
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success/Error Messages -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="notification-icon"></i>
+            <span class="notification-message"></span>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
